@@ -1,0 +1,37 @@
+mat-toolbar {
+    top: 0;
+    position: sticky;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.9);
+    z-index: 2;
+}
+
+mat-toolbar-row {
+    justify-content: space-between;
+}
+
+mat-grid-tile.principal {
+    z-index: 1;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.9);
+
+    div {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 1vw;
+
+        .titulo{
+            font-size: 3.5vw;
+            margin: 1vw;
+        }
+
+        .subtitulo {
+            font-size: 1.5vw;
+            margin: 1vw;
+        }
+    }
+
+    .linha-vertical {
+        border-left: 0.3vw solid black;
+    }
+}
+

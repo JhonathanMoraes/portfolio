@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html {box-sizing: border-box;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: rgb(97, 97, 97);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(26, 26, 48);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
