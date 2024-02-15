@@ -17,18 +17,67 @@
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
-<mat-grid-list cols="3" [style.background]="'#96a0c8'">
-  <mat-grid-tile colspan="3" class="principal">
-    <div class="principal linha-vertical">
-      <span class="titulo"><strong>Jhonathan Moraes</strong></span>
-      <span class="subtitulo">Desenvolvedor Full-stack Junior</span>
+<div>
+  <div id="principal">
+    <app-titulo-descricao
+      titulo="Jhonathan Moraes"
+      subtitulo="Desenvolvedor Full-stack"
+    >
+    </app-titulo-descricao>
+  </div>
+  <div rowspan="4" id="sobre-mim">
+    <div class="container">
+      <img src="../assets/foto-default.jpg" alt="Foto de Apresentação">
+      <app-caixa-de-texto
+        titulo="Sobre Mim"
+        texto="Pequeno texto me apresentando."
+      ></app-caixa-de-texto>
     </div>
-  </mat-grid-tile>
-  <mat-grid-tile id="sobre-mim">1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-  <mat-grid-tile>5</mat-grid-tile>
-  <mat-grid-tile>6</mat-grid-tile>
-  <mat-grid-tile colspan="3">7</mat-grid-tile>
-</mat-grid-list>
+  </div>
+  <div id="projetos">
+    <div class="container">
+      <span class="titulo">Projetos</span>
+      <div class="cards-container">
+        <app-card-projeto
+          titulo="Projeto 1"
+          descricao="Descrição 1"
+        ></app-card-projeto>
+        <app-card-projeto
+          titulo="Projeto 2"
+          descricao="Descrição 2"
+        ></app-card-projeto>
+        <app-card-projeto
+          titulo="Projeto 3"
+          descricao="Descrição 3"
+        ></app-card-projeto>
+        <app-card-projeto
+          titulo="Projeto 4"
+          descricao="Descrição 4"
+        ></app-card-projeto>
+      </div>
+    </div>
+  </div>
+  <div id="contato">
+    <div class="container">
+      <span class="titulo">Contato</span>
+      <div class="lista">
+        <div>
+          <img src="../assets/linkedin-icon.png" alt="Linkedin" srcset="">
+          <a href="#">Usuário</a>
+        </div>
+        <div>
+          <img src="../assets/github-icon.png" alt="Github" srcset="">
+          <a href="#">Usuário</a>
+        </div>
+        <div>
+          <img src="../assets/telefone-icon.png" alt="Telefone" srcset="">
+          <span>(00) 00000-0000</span>
+        </div>
+        <div>
+          <img src="../assets/email-icon.png" alt="E-mail" srcset="">
+          <span>usuario&#64;email.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

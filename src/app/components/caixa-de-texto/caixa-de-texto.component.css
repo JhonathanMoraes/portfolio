@@ -1,0 +1,19 @@
+.box {
+    display: flex;
+    flex-flow: column wrap;
+    word-wrap: break-word;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.80);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 15px;
+
+    .titulo {
+        font: 800 40px Roboto, sans-Serif;
+        margin-bottom: 10px;
+    }
+
+    .texto {
+        font: 300 25px Roboto, sans-Serif;
+    }
+}

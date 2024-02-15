@@ -1,0 +1,55 @@
+div.container {
+  width: 650px;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  margin: 20px;
+
+  .divisor {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 15px;
+
+    .titulo {
+      font: 800 30px Roboto, sans-Serif;
+      margin-bottom: 10px;
+    }
+
+    .descricao {
+      font: normal 16px Roboto, sans-Serif;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3f51b5;
+      color: white;
+      border: none;
+      transition: 0.2s;
+    }
+    button:hover {
+      transition: 0.2s;
+      color: #3f51b5;
+      background: white;
+      outline: 1px solid #3f51b5;
+    }
+  }
+
+  img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 850px) {
+  div.container {
+    width: auto;
+    flex-flow: column wrap;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}

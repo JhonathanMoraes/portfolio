@@ -1,37 +1,144 @@
 mat-toolbar {
-    top: 0;
-    position: sticky;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.9);
-    z-index: 2;
+  top: 0;
+  position: sticky;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.9);
+  z-index: 2;
 }
 
 mat-toolbar-row {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
-mat-grid-tile.principal {
-    z-index: 1;
-    background: white;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.9);
+div#principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+}
 
-    div {
+div#sobre-mim {
+  background: #212433;
+  padding: 120px 0px 120px 0px;
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    img {
+      margin: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    app-caixa-de-texto {
+      display: flex;
+      max-width: 800px;
+    }
+  }
+}
+
+.titulo {
+  font: 800 60px Roboto, sans-Serif;
+  margin: 40px;
+}
+
+div#projetos {
+  flex-flow: column wrap;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+  padding: 0 20px 60px 20px;
+
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .cards-container {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+div#contato {
+  display: flex;
+  justify-content: center;
+  background: #3f51b5;
+  color: white;
+  font: 300 26px Roboto, sans-Serif;
+  padding: 60px 0 60px 0;
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .lista {
+      display: flex;
+      flex-flow: column wrap;
+      border-left: 5px solid white;
+
+      div {
         display: flex;
-        flex-flow: column nowrap;
-        padding: 1vw;
+        justify-content: left;
+        align-items: center;
+        padding: 20px;
+      }
 
-        .titulo{
-            font-size: 3.5vw;
-            margin: 1vw;
-        }
+      img {
+        width: 40px;
+        margin: 15px;
+      }
 
-        .subtitulo {
-            font-size: 1.5vw;
-            margin: 1vw;
-        }
+      a {
+        color: white;
+        font-weight: 600;
+        text-decoration: underline;
+      }
     }
-
-    .linha-vertical {
-        border-left: 0.3vw solid black;
-    }
+  }
 }
 
+@media (max-width: 850px) {
+  div#sobre-mim {
+    .container {
+      flex-flow: column wrap;
+      align-items: center;
+
+      img {
+        max-width: 300px;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  div#projetos {
+    app-card-projeto {
+      width: 100%;
+    }
+  }
+
+  div#contato {
+    .container {
+      flex-flow: column wrap;
+
+      .lista {
+        border: none;
+
+        div {
+          flex-flow: column wrap;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

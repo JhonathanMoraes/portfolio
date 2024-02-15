@@ -1,0 +1,22 @@
+.principal {
+  display: flex;
+  flex-flow: column wrap;
+  border-left: 6px solid black;
+  padding: 15px;
+
+  .titulo {
+    font: 800 60px Roboto, sans-Serif;
+  }
+
+  .subtitulo {
+    font: 300 25px Roboto, sans-Serif;
+  }
+}
+
+@media (max-width: 600px) {
+  .principal {
+    border-left: none;
+    text-align: center;
+  }
+  
+}
