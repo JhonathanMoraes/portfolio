@@ -10,28 +10,22 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angu
   styleUrl: './card-projeto.component.css'
 })
 export class CardProjetoComponent {
-
-  @Input() titulo: string;
-  @Input() descricao: string;
+  @Input() projeto:{titulo:string, subtitulo:string, descricao:string, imgPath:string, repositoryPath:string};
 
   constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
-    const modalRef = this.dialog.open(Modal, {
-      data: {
-        titulo: this.titulo, descricao: this.descricao
-      }
+    this.dialog.open(Modal, {
+      data: {projeto:this.projeto}
     });
-
-    modalRef.afterClosed().subscribe(result => {
-      console.log(`Modal: ${result}`);
-    });
+    console.log(this.projeto);
   }
 }
 
 @Component({
   selector: 'modal',
   templateUrl: 'modal.html',
+  styleUrl: './modal.css',
   standalone: true,
   imports: [MatDialogModule],
 })

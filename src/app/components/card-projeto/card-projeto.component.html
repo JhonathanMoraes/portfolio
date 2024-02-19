@@ -1,9 +1,9 @@
 <div class="container">
-    <img src="/assets/projeto-default.png" alt="Imagem do projeto">
+    <img src="{{ projeto.imgPath }}" alt="Imagem do projeto">
     <div class="divisor">
         <div>
-            <span class="titulo">{{ titulo }}</span>
-            <p class="descricao">{{ descricao }}</p>
+            <span class="titulo">{{ projeto.titulo }}</span>
+            <p class="descricao">{{ projeto.subtitulo }}</p>
         </div>
         <button (click)="openDialog()">Mais detalhes</button>
     </div>

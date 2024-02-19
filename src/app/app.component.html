@@ -37,24 +37,20 @@
   <div id="projetos">
     <div class="container">
       <span class="titulo">Projetos</span>
-      <div class="cards-container">
-        <app-card-projeto
-          titulo="Projeto 1"
-          descricao="Descrição 1"
-        ></app-card-projeto>
-        <app-card-projeto
-          titulo="Projeto 2"
-          descricao="Descrição 2"
-        ></app-card-projeto>
-        <app-card-projeto
-          titulo="Projeto 3"
-          descricao="Descrição 3"
-        ></app-card-projeto>
-        <app-card-projeto
-          titulo="Projeto 4"
-          descricao="Descrição 4"
-        ></app-card-projeto>
-      </div>
+      <mat-tab-group dynamicHeight>
+        <mat-tab label="Repositórios em destaque">
+          <div class="cards-container">
+            <app-card-projeto *ngFor="let projeto of listaProjetos;"
+              [projeto]="projeto"
+            ></app-card-projeto>
+          </div>
+        </mat-tab>
+        <mat-tab label="Outros projetos">
+          <div class="outros-projetos">
+            <app-tabela-projeto></app-tabela-projeto>
+          </div>
+        </mat-tab>
+      </mat-tab-group>     
     </div>
   </div>
   <div id="contato">

@@ -1,8 +1,8 @@
 div.container {
-  width: 650px;
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
+  flex-grow: 1;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   margin: 20px;
@@ -27,6 +27,7 @@ div.container {
       background-color: #3f51b5;
       color: white;
       border: none;
+      cursor: pointer;
       transition: 0.2s;
     }
     button:hover {
@@ -38,18 +39,14 @@ div.container {
   }
 
   img {
-    max-width: 300px;
+    max-width: 100%;
+    object-fit: cover;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   div.container {
     width: auto;
     flex-flow: column wrap;
-
-    img {
-      max-width: 100%;
-      object-fit: cover;
-    }
   }
 }

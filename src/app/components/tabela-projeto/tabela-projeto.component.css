@@ -1,0 +1,49 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: #3f51b5;
+}
+
+tr.detail-linha {
+  height: 0;
+}
+
+tr.projeto-linha:not(.linha-ativa):hover {
+  background: rgb(73, 91, 191);
+}
+
+.projeto-linha td {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom-width: 0;
+  color: white;
+  word-break: break-all;
+}
+
+td.repositorio {
+  padding: 0;
+}
+
+.projeto-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+a.botao-link {
+  font: normal 14px Roboto, sans-Serif;
+  padding: 10px;
+  background-color: white;
+  color: #3f51b5;
+  border: none;
+  outline: 1px solid white;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 15px;
+}
+
+a.botao-link:hover {
+  color: white;
+  background-color: #3f51b5;
+  outline: 1px solid white;
+}

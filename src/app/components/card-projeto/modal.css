@@ -1,0 +1,25 @@
+.container {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+button,
+a {
+  font: normal 14px Roboto, sans-Serif;
+  padding: 10px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  outline: 1px solid #3f51b5;
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 5px;
+}
+button:hover,
+a:hover {
+  color: #3f51b5;
+  background-color: white;
+  outline: 1px solid #3f51b5;
+}

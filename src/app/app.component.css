@@ -53,6 +53,10 @@ div#projetos {
   z-index: 1;
   padding: 0 20px 60px 20px;
 
+  mat-tab-group {
+    width: 100%;
+  }
+
   .container {
     height: 100%;
     width: 100%;
@@ -61,10 +65,17 @@ div#projetos {
     align-items: center;
 
     .cards-container {
-      width: 100%;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-evenly;
+      justify-content: space-between;
+
+      app-card-projeto {
+        flex-grow: 1;
+      }
+    }
+
+    div.outros-projetos {
+      padding: 10px;
     }
   }
 }
@@ -108,7 +119,7 @@ div#contato {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   div#sobre-mim {
     .container {
       flex-flow: column wrap;

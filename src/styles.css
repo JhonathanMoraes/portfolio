@@ -8,12 +8,12 @@ body {
 
 ::-webkit-scrollbar {
   width: 5px;
-  background: #4b4b4b;
+  background: #4b4b4b7c;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #161616;
+  background-color: #161616c2;
 }
 
 a {
@@ -22,5 +22,5 @@ a {
 }
 
 img {
-    max-width: 400px;
+  max-width: 400px;
 }

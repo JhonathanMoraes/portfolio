@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows>
+  @for (column of columnsToDisplay; track column) {
+    <ng-container matColumnDef="{{column}}">
+      <td mat-cell *matCellDef="let projeto"> 
+        <button mat-icon-button (click)="(expandidoElement = expandidoElement === projeto ? null : projeto); $event.stopPropagation()">
+          @if (expandidoElement === projeto) {
+            <mat-icon>keyboard_arrow_up</mat-icon>
+          } @else {
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          }
+        </button>
+
+        {{projeto[column]}}
+        
+      </td>
+    </ng-container>
+  }
+
+  <ng-container matColumnDef="detailExpandido">
+    <td mat-cell *matCellDef="let projeto" class="repositorio">
+      <div class="projeto-detail" [@detailExpand]="projeto == expandidoElement ? 'expandido' : 'collapsed'">
+        <a href="{{ projeto.repositorio }}" target="_blank" class="botao-link">Visitar Repositório</a>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-row *matRowDef="let projeto; columns: columnsToDisplayExpand;"
+      class="projeto-linha"
+      [class.linha-ativa]="expandidoElement === projeto"
+      (click)="expandidoElement = expandidoElement === projeto ? null : projeto">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['detailExpandido']" class="detail-linha"></tr>
+</table>

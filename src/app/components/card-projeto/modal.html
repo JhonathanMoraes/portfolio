@@ -1,7 +1,8 @@
-<h2 mat-dialog-title>{{ data.titulo }}</h2>
-<mat-dialog-content>
-    {{ data.descricao }}
-</mat-dialog-content>
-<mat-dialog-actions>
-    <button mat-dialog-close>Voltar</button>
-  </mat-dialog-actions>
+<div class="container">
+    <h1 mat-dialog-title>{{ data.projeto.titulo }}</h1>
+    <mat-dialog-content>{{ data.projeto.descricao }}</mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-dialog-close>Voltar</button>
+        <a href="{{ data.projeto.repositoryPath }}" target="_blank">Visitar Repositório</a>
+    </mat-dialog-actions>
+</div>
