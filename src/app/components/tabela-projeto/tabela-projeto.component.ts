@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 
-/**
- * @title Table with expandable linhas
- */
 @Component({
   selector: 'app-tabela-projeto',
   styleUrls: ['tabela-projeto.component.css'],
@@ -19,27 +17,23 @@ import { MatTableModule } from '@angular/material/table';
     ]),
   ],
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatIconModule],
+  imports: [MatTableModule, MatButtonModule, MatIconModule, CommonModule],
 })
 export class TabelaProjetoComponent {
-  dataSource = ELEMENT_DATA;
+  @Input() projetos: PeriodicElement[];
+  dataSource = new MatTableDataSource<PeriodicElement>();
   columnsToDisplay = ['titulo'];
   columnsToDisplayExpand = [...this.columnsToDisplay];
   expandidoElement: PeriodicElement | null;
+
+  ngOnInit() {
+    this.dataSource = new MatTableDataSource<PeriodicElement>(this.projetos);
+    this.dataSource.data = this.dataSource.data.filter(row => row.destacado === false);
+  }
 }
 
 export interface PeriodicElement {
   titulo: string;
-  repositorio: string;
+  repositoryPath: string;
+  destacado: boolean;
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {
-    titulo: 'projeto 1',
-    repositorio: 'https://github.com/JhonathanMoraes/portfolio-angular',
-  },
-  {
-    titulo: 'projeto 2',
-    repositorio: 'https://github.com/JhonathanMoraes/portfolio-angular',
-  },
-];

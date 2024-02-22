@@ -9,17 +9,30 @@ import { TituloDescricaoComponent } from './components/titulo-descricao/titulo-d
 import { CaixaDeTextoComponent } from './components/caixa-de-texto/caixa-de-texto.component';
 import { CardProjetoComponent } from './components/card-projeto/card-projeto.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import projetos from './files/projetos.json';
 import { TabelaProjetoComponent } from "./components/tabela-projeto/tabela-projeto.component";
+import projetos from './files/projetos.json';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, MatToolbarModule, MatMenuModule, MatIconModule, MatButtonModule, TituloDescricaoComponent, CaixaDeTextoComponent, MatTabsModule, CardProjetoComponent, TabelaProjetoComponent]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  imports: [CommonModule, RouterOutlet, MatToolbarModule, MatMenuModule, MatIconModule, MatButtonModule, TituloDescricaoComponent, CaixaDeTextoComponent, MatTabsModule, CardProjetoComponent, TabelaProjetoComponent]
 })
 export class AppComponent {
   title = 'Portfólio';
   listaProjetos = projetos;
+
+  contato = {
+    linkedin: {
+      nome: 'Usuario linkedin',
+      link: '#'
+    },
+    github: {
+      nome: 'Usuário github',
+      link: '#'
+    },
+    telefone: '(00) 00000-0000',
+    email: 'user@email.com'
+  }
 }

@@ -1,52 +1,56 @@
-div.container {
+div.card {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
   flex-grow: 1;
-  background-color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  margin: 20px;
 
-  .divisor {
+  div.container {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    padding: 15px;
-
-    .titulo {
-      font: 800 30px Roboto, sans-Serif;
-      margin-bottom: 10px;
+    flex-grow: 1;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    margin: 20px;
+  
+    .divisor {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      padding: 15px;
+  
+      .titulo {
+        font: 800 30px Roboto, sans-Serif;
+        margin-bottom: 12px;
+      }
+  
+      .subtitulo {
+        font: normal 16px Roboto, sans-Serif;
+      }
+  
+      button {
+        padding: 10px;
+        background-color: #3f51b5;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      button:hover {
+        transition: 0.2s;
+        color: #3f51b5;
+        background: white;
+        outline: 1px solid #3f51b5;
+      }
     }
-
-    .descricao {
-      font: normal 16px Roboto, sans-Serif;
+  
+    img {
+      max-width: 100%;
+      object-fit: cover;
     }
-
-    button {
-      padding: 10px;
-      background-color: #3f51b5;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    button:hover {
-      transition: 0.2s;
-      color: #3f51b5;
-      background: white;
-      outline: 1px solid #3f51b5;
-    }
-  }
-
-  img {
-    max-width: 100%;
-    object-fit: cover;
   }
 }
 
 @media (max-width: 950px) {
   div.container {
     width: auto;
-    flex-flow: column wrap;
   }
 }

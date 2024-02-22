@@ -1,7 +1,7 @@
 <table mat-table [dataSource]="dataSource" multiTemplateDataRows>
   @for (column of columnsToDisplay; track column) {
     <ng-container matColumnDef="{{column}}">
-      <td mat-cell *matCellDef="let projeto"> 
+      <td mat-cell *matCellDef="let projeto">
         <button mat-icon-button (click)="(expandidoElement = expandidoElement === projeto ? null : projeto); $event.stopPropagation()">
           @if (expandidoElement === projeto) {
             <mat-icon>keyboard_arrow_up</mat-icon>
@@ -10,7 +10,7 @@
           }
         </button>
 
-        {{projeto[column]}}
+        {{ projeto[column] }}
         
       </td>
     </ng-container>
@@ -19,7 +19,8 @@
   <ng-container matColumnDef="detailExpandido">
     <td mat-cell *matCellDef="let projeto" class="repositorio">
       <div class="projeto-detail" [@detailExpand]="projeto == expandidoElement ? 'expandido' : 'collapsed'">
-        <a href="{{ projeto.repositorio }}" target="_blank" class="botao-link">Visitar Repositório</a>
+        <p class="subtitulo">{{ projeto.subtitulo }}</p>
+        <a href="{{ projeto.repositoryPath }}" target="_blank" class="botao-link">Visitar Repositório</a>
       </div>
     </td>
   </ng-container>

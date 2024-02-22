@@ -1,24 +1,26 @@
 import { Component, Inject, Input } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card-projeto',
   standalone: true,
-  imports: [MatDialogModule],
+  imports: [MatDialogModule, CommonModule],
   templateUrl: './card-projeto.component.html',
   styleUrl: './card-projeto.component.css'
 })
 export class CardProjetoComponent {
-  @Input() projeto:{titulo:string, subtitulo:string, descricao:string, imgPath:string, repositoryPath:string};
+  @Input() projetos: { titulo: string, subtitulo: string, descricao: string, imgPath: string, repositoryPath: string, destacado: boolean }[];
+  projeto: { titulo: string, subtitulo: string, descricao: string, imgPath: string, repositoryPath: string, destacado: boolean };
 
   constructor(public dialog: MatDialog) { }
 
-  openDialog(): void {
+  openDialog(projeto: any): void {
+    this.projeto = projeto;
     this.dialog.open(Modal, {
-      data: {projeto:this.projeto}
+      data: { projeto: projeto }
     });
-    console.log(this.projeto);
+    console.log(projeto);
   }
 }
 
@@ -27,7 +29,7 @@ export class CardProjetoComponent {
   templateUrl: 'modal.html',
   styleUrl: './modal.css',
   standalone: true,
-  imports: [MatDialogModule],
+  imports: [MatDialogModule, CommonModule],
 })
 export class Modal {
 

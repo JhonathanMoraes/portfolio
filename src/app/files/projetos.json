@@ -4,34 +4,79 @@
         "subtitulo" : "Subtitulo 1",
         "descricao" : "Descrição 1",
         "imgPath" : "/assets/projeto-default.png",
-        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular"
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : true
     },
     {
-        "titulo" : "Projeto 2",
-        "subtitulo" : "Subtitulo 2",
-        "descricao" : "Descrição 2",
-        "imgPath" : "/assets/projeto-default.png",
-        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular"
+        "titulo" : "",
+        "subtitulo" : "",
+        "descricao" : "",
+        "imgPath" : "",
+        "repositoryPath" : "",
+        "destacado" : true
     },
     {
         "titulo" : "Projeto 3",
         "subtitulo" : "Subtitulo 3",
         "descricao" : "Descrição 3",
         "imgPath" : "/assets/projeto-default.png",
-        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular"
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : true
     },
     {
         "titulo" : "Projeto 4",
         "subtitulo" : "Subtitulo 4",
         "descricao" : "Descrição 4",
         "imgPath" : "/assets/projeto-default.png",
-        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular"
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : true
     },
     {
         "titulo" : "Projeto 5",
         "subtitulo" : "Subtitulo 5",
         "descricao" : "Descrição 5",
         "imgPath" : "/assets/projeto-default.png",
-        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular"
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : true
+    },
+    {
+        "titulo" : "Projeto 6",
+        "subtitulo" : "Subtitulo 6",
+        "descricao" : "Descrição 6",
+        "imgPath" : "/assets/projeto-default.png",
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : false
+    },
+    {
+        "titulo" : "Projeto 7",
+        "subtitulo" : "Subtitulo 7",
+        "descricao" : "Descrição 7",
+        "imgPath" : "/assets/projeto-default.png",
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : false
+    },
+    {
+        "titulo" : "Projeto 8",
+        "subtitulo" : "Subtitulo 8",
+        "descricao" : "Descrição 8",
+        "imgPath" : "/assets/projeto-default.png",
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : false
+    },
+    {
+        "titulo" : "Projeto 9",
+        "subtitulo" : "Subtitulo 9",
+        "descricao" : "Descrição 9",
+        "imgPath" : "/assets/projeto-default.png",
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : false
+    },
+    {
+        "titulo" : "Projeto 10",
+        "subtitulo" : "Subtitulo 10",
+        "descricao" : "Descrição 10",
+        "imgPath" : "/assets/projeto-default.png",
+        "repositoryPath" : "https://github.com/JhonathanMoraes/portfolio-angular",
+        "destacado" : false
     }
 ]

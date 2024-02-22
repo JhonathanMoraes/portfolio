@@ -40,14 +40,12 @@
       <mat-tab-group dynamicHeight>
         <mat-tab label="Repositórios em destaque">
           <div class="cards-container">
-            <app-card-projeto *ngFor="let projeto of listaProjetos;"
-              [projeto]="projeto"
-            ></app-card-projeto>
+            <app-card-projeto [projetos]="listaProjetos"></app-card-projeto>
           </div>
         </mat-tab>
         <mat-tab label="Outros projetos">
           <div class="outros-projetos">
-            <app-tabela-projeto></app-tabela-projeto>
+            <app-tabela-projeto [projetos]="listaProjetos"></app-tabela-projeto>
           </div>
         </mat-tab>
       </mat-tab-group>     
@@ -56,22 +54,22 @@
   <div id="contato">
     <div class="container">
       <span class="titulo">Contato</span>
-      <div class="lista">
-        <div>
+      <div class="dados-contato">
+        <div *ngIf="contato.linkedin.nome && contato.linkedin.link">
           <img src="../assets/linkedin-icon.png" alt="Linkedin" srcset="">
-          <a href="#">Usuário</a>
+          <a href="{{ contato.linkedin.link }}">{{ contato.linkedin.nome }}</a>
         </div>
-        <div>
+        <div *ngIf="contato.github.nome && contato.github.link">
           <img src="../assets/github-icon.png" alt="Github" srcset="">
-          <a href="#">Usuário</a>
+          <a href="{{ contato.github.link }}">{{ contato.github.nome }}</a>
         </div>
-        <div>
+        <div *ngIf="contato.telefone">
           <img src="../assets/telefone-icon.png" alt="Telefone" srcset="">
-          <span>(00) 00000-0000</span>
+          <span mask="(00) 00000-0000">{{ contato.telefone }}</span>
         </div>
-        <div>
+        <div *ngIf="contato.email">
           <img src="../assets/email-icon.png" alt="E-mail" srcset="">
-          <span>usuario&#64;email.com</span>
+          <span>{{ contato.email }}</span>
         </div>
       </div>
     </div>

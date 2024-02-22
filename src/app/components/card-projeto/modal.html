@@ -1,8 +1,10 @@
 <div class="container">
-    <h1 mat-dialog-title>{{ data.projeto.titulo }}</h1>
-    <mat-dialog-content>{{ data.projeto.descricao }}</mat-dialog-content>
+    <h1 mat-dialog-title>{{ data.projeto.titulo || "Sem título" }}</h1>
+    <mat-dialog-content>{{ data.projeto.descricao || "-Sem descrição." }}</mat-dialog-content>
     <mat-dialog-actions align="end">
         <button mat-dialog-close>Voltar</button>
-        <a href="{{ data.projeto.repositoryPath }}" target="_blank">Visitar Repositório</a>
+        <div *ngIf="data.projeto.repositoryPath">
+            <a href="{{ data.projeto.repositoryPath }}" target="_blank">Visitar Repositório</a>
+        </div>
     </mat-dialog-actions>
 </div>

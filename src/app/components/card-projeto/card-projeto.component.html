@@ -1,10 +1,14 @@
-<div class="container">
-    <img src="{{ projeto.imgPath }}" alt="Imagem do projeto">
-    <div class="divisor">
-        <div>
-            <span class="titulo">{{ projeto.titulo }}</span>
-            <p class="descricao">{{ projeto.subtitulo }}</p>
+@for (projeto of projetos; track projeto) {
+    <div *ngIf="projeto.destacado" class="card">
+        <div class="container">
+            <img src="{{ projeto.imgPath || '/assets/projeto-default.png' }}" alt="Imagem do projeto">
+            <div class="divisor">
+                <div>
+                    <h3 class="titulo">{{ projeto.titulo || "Sem título" }}</h3>
+                    <p class="subtitulo">{{ projeto.subtitulo }}</p>
+                </div>
+                <button (click)="openDialog(projeto)">Mais detalhes</button>
+            </div>
         </div>
-        <button (click)="openDialog()">Mais detalhes</button>
     </div>
-</div>
+}
