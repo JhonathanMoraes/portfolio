@@ -69,7 +69,7 @@
         </div>
         <div *ngIf="contato.email">
           <img src="../assets/email-icon.png" alt="E-mail" srcset="">
-          <span>{{ contato.email }}</span>
+          <a href="mailto:{{ contato.email }}">{{ contato.email }}</a>
         </div>
       </div>
     </div>

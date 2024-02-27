@@ -1,6 +1,6 @@
 <div class="container">
     <h1 mat-dialog-title>{{ data.projeto.titulo || "Sem título" }}</h1>
-    <mat-dialog-content>{{ data.projeto.descricao || "-Sem descrição." }}</mat-dialog-content>
+    <mat-dialog-content [innerHTML]="data.projeto.descricao || '- Sem descrição.'"></mat-dialog-content>
     <mat-dialog-actions align="end">
         <button mat-dialog-close>Voltar</button>
         <div *ngIf="data.projeto.repositoryPath">
