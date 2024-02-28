@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="fixed">
   <mat-toolbar-row>
-    <span>{{ title }}</span>
+    <span>Portfólio</span>
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu">
       <mat-icon>menu</mat-icon>
     </button>
@@ -20,8 +20,8 @@
 <div>
   <div id="principal">
     <app-titulo-descricao
-      titulo="Jhonathan Moraes"
-      subtitulo="Desenvolvedor Full-stack"
+      titulo="{{ titulo }}"
+      subtitulo="{{ subtitulo }}"
     >
     </app-titulo-descricao>
   </div>

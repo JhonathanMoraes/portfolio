@@ -20,7 +20,10 @@ import projetos from './files/projetos.json';
   imports: [CommonModule, RouterOutlet, MatToolbarModule, MatMenuModule, MatIconModule, MatButtonModule, TituloDescricaoComponent, CaixaDeTextoComponent, MatTabsModule, CardProjetoComponent, TabelaProjetoComponent]
 })
 export class AppComponent {
-  title = 'Portfólio';
+
+  titulo = 'Jhonathan Moraes';
+  subtitulo = 'Desenvolvedor Full-stack';
+
   listaProjetos = projetos;
 
   contato = {
