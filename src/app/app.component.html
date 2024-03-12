@@ -43,11 +43,13 @@
             <app-card-projeto [projetos]="listaProjetos"></app-card-projeto>
           </div>
         </mat-tab>
-        <mat-tab label="Outros projetos">
-          <div class="outros-projetos">
-            <app-tabela-projeto [projetos]="listaProjetos"></app-tabela-projeto>
-          </div>
-        </mat-tab>
+        <div *ngIf="projetoDestacado(false)">
+          <mat-tab label="Outros projetos">
+            <div class="outros-projetos">
+              <app-tabela-projeto [projetos]="listaProjetos"></app-tabela-projeto>
+            </div>
+          </mat-tab>
+        </div>
       </mat-tab-group>     
     </div>
   </div>

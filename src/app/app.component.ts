@@ -26,6 +26,10 @@ export class AppComponent {
 
   listaProjetos = projetos;
 
+  projetoDestacado(valor: boolean) {
+    return this.listaProjetos.some(projeto => projeto.destacado === valor);
+  }
+
   contato = {
     linkedin: {
       nome: 'Usuario linkedin',
