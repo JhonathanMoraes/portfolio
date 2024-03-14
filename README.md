@@ -29,7 +29,7 @@ Modelo template de portfólio para desenvolvedores feito em angular 17.
      ```
 
      ```
-     cd portfolio
+     cd template-portfolio-angular
      ```
 
    - Instale os pacotes NPM.
