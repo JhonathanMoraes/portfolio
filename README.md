@@ -40,6 +40,12 @@ Modelo template de portfólio para desenvolvedores feito em angular 17.
      npm install
      ```
 
+     Se você encontrar algum relatório de vulnerabilidade, corrija-o com:
+
+     ```
+     npm audit fix
+     ```
+
 3. ### Abra o projeto no navegador
 
    Por fim, execute o comando `ng serve -o` para iniciar o servidor local e abrir o projeto automaticamente.
