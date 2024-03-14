@@ -1,19 +1,18 @@
 .box {
-    display: flex;
-    flex-flow: column wrap;
-    word-wrap: break-word;
-    background: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.80);
-    padding: 30px;
-    border-radius: 15px;
-    margin: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  word-wrap: break-word;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  padding: 5%;
+  border-radius: 15px;
 
-    .titulo {
-        font: 800 40px Roboto, sans-Serif;
-        margin-bottom: 10px;
-    }
+  .titulo {
+    font: 800 clamp(2em, 1em + 5vw, 3.5em) Roboto, sans-Serif;
+    margin-bottom: 10px;
+  }
 
-    .texto {
-        font: 300 25px Roboto, sans-Serif;
-    }
+  .texto {
+    font: 300 clamp(1em, 0.2em + 5vw, 2em) Roboto, sans-Serif;
+  }
 }

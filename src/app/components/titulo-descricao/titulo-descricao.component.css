@@ -5,11 +5,11 @@
   padding: 15px;
 
   .titulo {
-    font: 800 60px Roboto, sans-Serif;
+    font: 800 clamp(1.75em, 2em + 3vw, 4.5em) Roboto, sans-Serif;
   }
 
   .subtitulo {
-    font: 300 25px Roboto, sans-Serif;
+    font: 300 clamp(0.75em, 1em + 2vw, 2.5em) Roboto, sans-Serif;
   }
 }
 
